@@ -1,0 +1,113 @@
+.lp{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 96px 20px 70px; /* navbar 고려 */
+}
+
+.hero{
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--border);
+}
+
+.title{
+  margin: 0;
+  font-size: 34px;
+  font-weight: 750;
+  letter-spacing: -0.3px;
+}
+
+.sub{
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.grid{
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.card{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.card h3{
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.card p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.section{
+  margin-top: 34px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+}
+
+.sectionHead{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.sectionHead h2{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.sectionHead p{
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.steps{
+  display: grid;
+  gap: 10px;
+}
+
+.step{
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.02);
+  font-size: 13px;
+  color: var(--text);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.step span{
+  width: 32px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.contact{
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 900px){
+  .grid{ grid-template-columns: 1fr; }
+}
