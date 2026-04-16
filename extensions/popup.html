@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>PhishingBlock</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>PhishingBlock</h1>
+    <p class="sub">현재 탭 URL을 검사합니다</p>
+
+    <!-- ✅ 현재 탭 미리보기 (도메인만) -->
+    <div class="current">
+      <div class="currentLabel">현재 탭</div>
+      <div id="currentHost" class="currentHost">-</div>
+    </div>
+
+    <!-- ✅ URL 입력 (자동 채워짐, 수정 가능) -->
+    <input id="url" type="text" placeholder="https://example.com" />
+    <button id="scan">검사하기</button>
+
+    <p id="status" class="status"></p>
+
+    <!-- ✅ 결과 영역 (초기엔 숨김) -->
+    <div id="result" class="result hidden">
+      <div id="badge" class="badge"></div>
+
+      <div id="riskText" class="riskText"></div>
+      <div id="riskSub" class="riskSub"></div>
+      <div id="prob" class="prob hidden"></div>
+
+      <div class="signals">
+        <div class="signalsTitle">판단 근거(요약)</div>
+        <div id="signals"></div>
+      </div>
+
+      <div class="note">
+        * 본 결과는 참고용이며 최종 판단은 사용자 책임입니다.
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
